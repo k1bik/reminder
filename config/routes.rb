@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   root "calendar#index"
 
   resources :calendar, only: %i[index]
+
+  resources :reminders, only: %i[new create]
 end
