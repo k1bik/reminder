@@ -1,5 +1,9 @@
 <%= link_to "Создать напоминание", new_reminder_path, class: "underline text-blue-500" %>
 
-<%= month_calendar do |date| %>
+<%= month_calendar(events: reminders) do |date, reminders| %>
   <%= date.day %>
+
+  <% reminders.each do |reminder| %>
+    <%= reminder.reminder_time.strftime("%H:%M") %>
+  <% end %>
 <% end %>
