@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+.simple-calendar {
+  @apply w-full;
+
+  .calendar-heading {
+    @apply text-center mb-2;
+
+    .calendar-title {
+      @apply uppercase;
+    }
+
+    nav {
+      @apply flex justify-between;
+
+      a {
+        @apply underline text-blue-500;
+      }
+    }
+  }
+
+  .table {
+    @apply w-full;
+  }
+
+  .day {
+    @apply text-center h-16;
+  }
+
+  .prev-month, .next-month {
+    @apply opacity-25;
+  }
+
+  .wday-6, .wday-0 {
+    @apply text-red-600;
+  }
+
+  .today {
+    @apply text-blue-500 font-bold;
+  }
+}
