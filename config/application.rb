@@ -39,7 +39,7 @@ module Reminder
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.i18n.available_locales = [:ru]
+    config.i18n.available_locales = [ :ru ]
     config.i18n.default_locale = :ru
     config.time_zone = "Moscow"
     config.active_record.default_timezone = :local
