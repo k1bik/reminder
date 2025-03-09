@@ -9,6 +9,8 @@
 <%= form_with scope: :reminder, url: reminders_path, class: "flex flex-col gap-2" do |f| %>
   <%= label_tag :reminder_time, "Напомнить в" %>
   <%= f.datetime_field :reminder_time %>
+  <%= label_tag :recipient_email, "Email получателя" %>
+  <%= f.email_field :recipient_email %>
   <%= label_tag :text, "Текст" %>
   <%= f.text_area :text %>
 

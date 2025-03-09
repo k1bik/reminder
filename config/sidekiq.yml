@@ -1,3 +1,8 @@
+---
+:queues:
+  - ["mailers", 5]
+  - ["default", 3]
+
 :scheduler:
   :schedule:
     reminder_observer_job:

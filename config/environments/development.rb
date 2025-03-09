@@ -89,4 +89,6 @@ Rails.application.configure do
     authentication: "login",
     ssl: true
   }
+
+  config.active_job.queue_adapter = :sidekiq
 end

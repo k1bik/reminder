@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_02_164951) do
+ActiveRecord::Schema[7.2].define(version: 2025_03_09_185334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,5 +19,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_02_164951) do
     t.datetime "reminder_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "sent_at"
+    t.string "recipient_email", null: false
   end
 end

@@ -8,7 +8,7 @@ class RemindersController < ApplicationController
   end
 
   def create
-    permitted = params.require(:reminder).permit(:text, :reminder_time)
+    permitted = params.require(:reminder).permit(:text, :reminder_time, :recipient_email)
 
     reminder = ReminderRecord.new(permitted)
 
