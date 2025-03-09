@@ -3,7 +3,12 @@
 <%= month_calendar(events: reminders) do |date, reminders| %>
   <%= date.day %>
 
-  <% reminders.each do |reminder| %>
-    <%= reminder.reminder_time.strftime("%H:%M") %>
-  <% end %>
+  <div class="flex flex-col">
+    <% reminders.each do |reminder| %>
+      <%= link_to reminder.reminder_time.strftime("%H:%M"),
+        reminder_path(reminder),
+        class: "underline text-blue-500 w-max mx-auto"
+      %>
+    <% end %>
+  </div>
 <% end %>

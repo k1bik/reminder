@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   resources :calendar, only: %i[index]
 
-  resources :reminders, only: %i[new create]
+  resources :reminders, only: %i[new create show]
 end

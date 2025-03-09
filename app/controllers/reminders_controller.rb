@@ -18,4 +18,12 @@ class RemindersController < ApplicationController
       render :new, status: :unprocessable_entity, locals: { reminder: }
     end
   end
+
+  def show
+    reminder = ReminderRecord.find(params[:id])
+
+    respond_to do |f|
+      f.html { render :show, locals: { reminder: } }
+    end
+  end
 end
